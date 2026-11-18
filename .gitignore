@@ -12,3 +12,7 @@ desktop.ini
 # Local scratch
 *.bak
 *.tmp
+
+# Python
+__pycache__/
+*.pyc

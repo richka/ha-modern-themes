@@ -32,3 +32,7 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 - No card-mod and no shadow-DOM patches: variables only, for upgrade safety.
 - Requires Home Assistant 2026.11 or newer.
+- `themes/modern.yaml` is generated from `src/modern.src.yaml` by `tools/build.py`. The
+  shipped file contains no YAML anchors or merge keys, so installing it does not produce
+  `duplicate key` warnings in the Home Assistant log.
+- Theme comments are in English.
