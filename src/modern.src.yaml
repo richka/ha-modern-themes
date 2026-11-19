@@ -1,5 +1,5 @@
 # =============================================================================
-#  Modern * — a modern theme family for Home Assistant 2026.x (11 variants)
+#  Modern * — a modern theme family for Home Assistant (11 variants)
 #  Modern Red is the base (Fluent red palette); the other variants only change the brand.
 #  Inspired by Metrology (Fluent/Metro), with no card-mod dependency.
 #  Covers: legacy (paper/mdc) plus the new --ha-* / --wa-* tokens,

@@ -25,13 +25,15 @@ and the project uses [Semantic Versioning](https://semver.org/).
   `#455a64`).
 - Typography based on Segoe UI Variable, plus `--ha-font-*`, `paper-font-*` and
   `mdc-typography-*` aliases.
-- Geometry, elevation, form and HACS tokens.
+- Geometry, elevation and form tokens.
 - `--font-stack` compatibility alias so CSS written for older themes keeps working.
 
 ### Notes
 
 - No card-mod and no shadow-DOM patches: variables only, for upgrade safety.
-- Requires Home Assistant 2026.11 or newer.
+- Requires Home Assistant 2025.8 or newer, the first release with the `--ha-color-*`
+  token set. Older releases load the theme but keep their default colors on the newest
+  components.
 - `themes/modern.yaml` is generated from `src/modern.src.yaml` by `tools/build.py`. The
   shipped file contains no YAML anchors or merge keys, so installing it does not produce
   `duplicate key` warnings in the Home Assistant log.
