@@ -1,0 +1,30 @@
+# Variables the theme sets that nothing reads.
+#
+# This is a ratchet, not an allowlist. CI fails on any new unread name, and
+# `tools/check_vars.py --strict-baseline` also fails when an entry here is no
+# longer unread, so the file cannot quietly rot.
+#
+# Verified 2026-11-24 against home-assistant/frontend `heads/master` and the
+# running configuration's `www/` directory. See ISSUES.md, issue 3.
+#
+# Ten variables that nothing read at all were removed from
+# `src/modern.src.yaml` in the same pass. What is left is one deliberate group.
+
+# --- declared by the frontend, never read --------------------------------------
+# The frontend defines a default for each of these, so they exist on purpose as
+# part of its theming surface, but no stylesheet or component consumes them and
+# no card installed here reads them either. They are kept on purpose: a
+# third-party card can start reading one at any time, and removing them would
+# change that card's look for no gain. The theme's values are aliases of tokens
+# it sets anyway, so they cost one line and no behaviour.
+
+chip-background-color
+darker-primary-color
+ha-color-surface-lower
+ha-color-text-link
+ha-font-family-longform
+ha-font-weight-action
+ha-font-weight-body
+ha-font-weight-heading
+outline-hover-color
+sidebar-selected-text-color

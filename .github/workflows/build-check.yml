@@ -20,3 +20,15 @@ jobs:
         run: pip install pyyaml
       - name: Verify themes/modern.yaml matches src/modern.src.yaml
         run: python tools/build.py --check
+      - name: Self-test the variable checker
+        run: python tools/check_vars.py --self-test
+      - name: Verify every theme variable has a reader
+        # Known-unread names live in tools/vars_baseline.txt; anything new, and any
+        # entry there that stopped being unread, fails. The ref is the frontend tag
+        # shipped with Home Assistant 2026.11.2, so a frontend commit on master
+        # cannot turn an unrelated pull request red.
+        run: >
+          python tools/check_vars.py
+          --baseline tools/vars_baseline.txt
+          --strict-baseline
+          --ref tags/20261028.6

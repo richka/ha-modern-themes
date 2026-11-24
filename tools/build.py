@@ -6,9 +6,14 @@ Home Assistant's YAML loader reports every overridden merge key as a "duplicate 
 warning, so the shipped file is generated with the merges expanded: eleven complete
 theme blocks, no anchors, no merge keys, no warnings.
 
+The build also asserts the properties the README sells, because the equality check
+alone cannot: a ramp step deleted from the source still produces a file equal to its
+source, and CI would stay green while the README became false. It also keeps the
+variant table in README.md generated from the same data.
+
 Usage:
-    python tools/build.py          # rewrite themes/modern.yaml
-    python tools/build.py --check  # verify the checked-in file is up to date
+    python tools/build.py          # rewrite themes/modern.yaml and the README table
+    python tools/build.py --check  # verify both are up to date
 """
 
 from __future__ import annotations
@@ -24,6 +29,12 @@ import yaml
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SRC = ROOT / "src" / "modern.src.yaml"
 OUT = ROOT / "themes" / "modern.yaml"
+README = ROOT / "README.md"
+
+README_BEGIN = "<!-- BEGIN VARIANTS -->"
+README_END = "<!-- END VARIANTS -->"
+
+RAMP_STEPS = ("05", "10", "20", "30", "40", "50", "60", "70", "80", "90", "95")
 
 BLOCK_RE = re.compile(r"^([A-Za-z][A-Za-z0-9 _\-]*):(?:\s*&[A-Za-z0-9_]+)?\s*$")
 ANCHOR_SUFFIX_RE = re.compile(r":\s*&[A-Za-z0-9_]+\s*$")
@@ -130,6 +141,61 @@ def expand(base_lines: list[str], name: str, data: dict[str, object], overrides:
     return out
 
 
+def render_variant_table(themes: dict[str, dict]) -> str:
+    """Render the README variant table from the generated themes."""
+    lines = [
+        "| Theme | Primary | Accent | Text on primary |",
+        "| --- | --- | --- | --- |",
+    ]
+    for index, (name, theme) in enumerate(themes.items()):
+        label = f"**{name}**" + (" (base)" if index == 0 else "")
+        text = str(theme["text-primary-color"]).upper()
+        on_primary = {"#FFFFFF": "white", "#000000": "black"}.get(text, text)
+        lines.append(
+            f"| {label} | `{str(theme['primary-color']).upper()}` "
+            f"| `{str(theme['accent-color']).upper()}` | {on_primary} |"
+        )
+    return "\n".join(lines)
+
+
+def sync_readme(text: str, table: str) -> str:
+    """Replace the generated table between the README markers."""
+    if README_BEGIN not in text or README_END not in text:
+        raise SystemExit(f"README.md is missing {README_BEGIN} / {README_END} markers")
+    head, rest = text.split(README_BEGIN, 1)
+    _, tail = rest.split(README_END, 1)
+    return f"{head}{README_BEGIN}\n{table}\n{README_END}{tail}"
+
+
+def check_shape(generated: dict[str, dict]) -> None:
+    """Assert the invariants the README promises but equality cannot catch."""
+    base_name, base = next(iter(generated.items()))
+    base_modes = base.get("modes") or {}
+
+    for name, theme in generated.items():
+        modes = theme.get("modes") or {}
+        if set(modes) != {"light", "dark"}:
+            raise SystemExit(f"{name}: expected light and dark modes, got {sorted(modes)}")
+
+        missing_ramp = [step for step in RAMP_STEPS if f"ha-color-primary-{step}" not in theme]
+        if missing_ramp:
+            raise SystemExit(f"{name}: missing ha-color-primary-{', -'.join(missing_ramp)}")
+
+        if set(theme) != set(base):
+            raise SystemExit(
+                f"{name}: key set differs from {base_name} "
+                f"(missing: {sorted(set(base) - set(theme))}, extra: {sorted(set(theme) - set(base))})"
+            )
+
+        for mode in ("light", "dark"):
+            if set(modes[mode]) != set(base_modes[mode]):
+                raise SystemExit(
+                    f"{name}: {mode} key set differs from {base_name} "
+                    f"(missing: {sorted(set(base_modes[mode]) - set(modes[mode]))}, "
+                    f"extra: {sorted(set(modes[mode]) - set(base_modes[mode]))})"
+                )
+
+
 def build() -> str:
     text = SRC.read_text(encoding="utf-8")
     data = yaml.safe_load(text)
@@ -174,27 +240,51 @@ def build() -> str:
     if len(generated) != len(blocks):
         raise SystemExit(f"expected {len(blocks)} themes, generated {len(generated)}")
 
+    check_shape(generated)
+
     return document
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="only verify that themes/modern.yaml is current")
+    parser.add_argument("--check", action="store_true", help="only verify that the generated files are current")
     args = parser.parse_args()
 
     document = build()
+    themes = yaml.safe_load(document)
+
+    readme_text = README.read_text(encoding="utf-8")
+    readme_expected = sync_readme(readme_text, render_variant_table(themes))
+    current = OUT.read_text(encoding="utf-8") if OUT.exists() else ""
+
     if args.check:
-        current = OUT.read_text(encoding="utf-8") if OUT.exists() else ""
+        problems = []
         if current != document:
-            print(f"{OUT} is out of date; run python tools/build.py", file=sys.stderr)
+            problems.append(f"{OUT.relative_to(ROOT)} is out of date")
+        if readme_text != readme_expected:
+            problems.append("README.md variant table is out of date")
+        if problems:
+            for problem in problems:
+                print(problem, file=sys.stderr)
+            print("run python tools/build.py", file=sys.stderr)
             return 1
-        print(f"{OUT} is up to date")
+        print("themes and README table are up to date")
         return 0
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(document, encoding="utf-8", newline="\n")
-    themes = yaml.safe_load(document)
-    print(f"wrote {OUT.relative_to(ROOT)}: {len(themes)} themes, {len(document.splitlines())} lines")
+    changed = []
+    if current != document:
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(document, encoding="utf-8", newline="\n")
+        changed.append(f"{OUT.relative_to(ROOT)} ({len(themes)} themes, {len(document.splitlines())} lines)")
+    if readme_text != readme_expected:
+        README.write_text(readme_expected, encoding="utf-8", newline="\n")
+        changed.append("README.md (variant table)")
+
+    if changed:
+        for item in changed:
+            print(f"wrote {item}")
+    else:
+        print("everything is up to date")
     return 0
 
 

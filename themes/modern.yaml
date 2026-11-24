@@ -8,7 +8,6 @@ Modern Red:
   light-primary-color: "#F1C4D7"
   accent-color: "#E90062"
   rgb-accent-color: "233,0,98"
-  hue-primary-color: "335deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#320015"
@@ -28,7 +27,6 @@ Modern Red:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -47,8 +45,6 @@ Modern Red:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -173,8 +169,6 @@ Modern Red:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -190,7 +184,6 @@ Modern Red:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -254,9 +247,6 @@ Modern Red:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -365,7 +355,6 @@ Modern Blue:
   light-primary-color: "#9CCBF0"
   accent-color: "#008DFD"
   rgb-accent-color: "0,141,253"
-  hue-primary-color: "207deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#001F37"
@@ -385,7 +374,6 @@ Modern Blue:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -404,8 +392,6 @@ Modern Blue:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -530,8 +516,6 @@ Modern Blue:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -547,7 +531,6 @@ Modern Blue:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -611,9 +594,6 @@ Modern Blue:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -722,7 +702,6 @@ Modern Green:
   light-primary-color: "#9CEBC5"
   accent-color: "#00F17D"
   rgb-accent-color: "0,241,125"
-  hue-primary-color: "151deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#00341B"
@@ -742,7 +721,6 @@ Modern Green:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#000000"
-  accent-text-color: "#000000"
   rgb-text-primary-color: "0,0,0"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -761,8 +739,6 @@ Modern Green:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -887,8 +863,6 @@ Modern Green:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -904,7 +878,6 @@ Modern Green:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -968,9 +941,6 @@ Modern Green:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -1079,7 +1049,6 @@ Modern Orange:
   light-primary-color: "#FFD39C"
   accent-color: "#FF9D00"
   rgb-accent-color: "255,157,0"
-  hue-primary-color: "33deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#412400"
@@ -1099,7 +1068,6 @@ Modern Orange:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#000000"
-  accent-text-color: "#000000"
   rgb-text-primary-color: "0,0,0"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -1118,8 +1086,6 @@ Modern Orange:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -1244,8 +1210,6 @@ Modern Orange:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -1261,7 +1225,6 @@ Modern Orange:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -1325,9 +1288,6 @@ Modern Orange:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -1436,7 +1396,6 @@ Modern Purple:
   light-primary-color: "#C59CEB"
   accent-color: "#A94DFF"
   rgb-accent-color: "169,77,255"
-  hue-primary-color: "271deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#1B0034"
@@ -1456,7 +1415,6 @@ Modern Purple:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -1475,8 +1433,6 @@ Modern Purple:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -1601,8 +1557,6 @@ Modern Purple:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -1618,7 +1572,6 @@ Modern Purple:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -1682,9 +1635,6 @@ Modern Purple:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -1793,7 +1743,6 @@ Modern Slate:
   light-primary-color: "#BBBFC5"
   accent-color: "#677385"
   rgb-accent-color: "103,115,133"
-  hue-primary-color: "214deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#14171B"
@@ -1813,7 +1762,6 @@ Modern Slate:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -1832,8 +1780,6 @@ Modern Slate:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -1958,8 +1904,6 @@ Modern Slate:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -1975,7 +1919,6 @@ Modern Slate:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -2039,9 +1982,6 @@ Modern Slate:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -2150,7 +2090,6 @@ Modern Teal:
   light-primary-color: "#9CCFC8"
   accent-color: "#00B294"
   rgb-accent-color: "0,178,148"
-  hue-primary-color: "173deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#00211D"
@@ -2170,7 +2109,6 @@ Modern Teal:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -2189,8 +2127,6 @@ Modern Teal:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -2315,8 +2251,6 @@ Modern Teal:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -2332,7 +2266,6 @@ Modern Teal:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -2396,9 +2329,6 @@ Modern Teal:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -2507,7 +2437,6 @@ Modern Amber:
   light-primary-color: "#E9CD9C"
   accent-color: "#FFB900"
   rgb-accent-color: "255,185,0"
-  hue-primary-color: "38deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#332000"
@@ -2527,7 +2456,6 @@ Modern Amber:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#000000"
-  accent-text-color: "#000000"
   rgb-text-primary-color: "0,0,0"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -2546,8 +2474,6 @@ Modern Amber:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -2672,8 +2598,6 @@ Modern Amber:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -2689,7 +2613,6 @@ Modern Amber:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -2753,9 +2676,6 @@ Modern Amber:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -2864,7 +2784,6 @@ Modern Indigo:
   light-primary-color: "#B9BCE5"
   accent-color: "#6B73E8"
   rgb-accent-color: "107,115,232"
-  hue-primary-color: "236deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#131530"
@@ -2884,7 +2803,6 @@ Modern Indigo:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -2903,8 +2821,6 @@ Modern Indigo:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -3029,8 +2945,6 @@ Modern Indigo:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -3046,7 +2960,6 @@ Modern Indigo:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -3110,9 +3023,6 @@ Modern Indigo:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -3221,7 +3131,6 @@ Modern Pink:
   light-primary-color: "#E7B2E2"
   accent-color: "#E3008C"
   rgb-accent-color: "227,0,140"
-  hue-primary-color: "307deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#320F2E"
@@ -3241,7 +3150,6 @@ Modern Pink:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -3260,8 +3168,6 @@ Modern Pink:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -3386,8 +3292,6 @@ Modern Pink:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -3403,7 +3307,6 @@ Modern Pink:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -3467,9 +3370,6 @@ Modern Pink:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
@@ -3578,7 +3478,6 @@ Modern Graphite:
   light-primary-color: "#C0C0C0"
   accent-color: "#8A8A8A"
   rgb-accent-color: "138,138,138"
-  hue-primary-color: "0deg"
 
   # ── 2. NEW --ha-color-* TOKENS (2026 design system) ───────────────────────
   ha-color-primary-05: "#181818"
@@ -3598,7 +3497,6 @@ Modern Graphite:
 
   # ── 3. SEMANTIC COLORS ────────────────────────────────────────────────────
   text-primary-color: "#FFFFFF"
-  accent-text-color: "#FFFFFF"
   rgb-text-primary-color: "255,255,255"
   error-color: "#D13438"
   rgb-error-color: "209,52,56"
@@ -3617,8 +3515,6 @@ Modern Graphite:
   ha-card-border-radius: "18px"
   ha-card-header-color: "var(--primary-text-color)"
   ha-card-header-font-size: "1.25rem"
-  ha-card-header-font-weight: "600"
-  ha-card-header-letter-spacing: "0"
   lovelace-background: "var(--primary-background-color)"
 
   # ── 5. STATE COLORS (2026 mechanism: --state-<domain>-<state>-color) ──────
@@ -3743,8 +3639,6 @@ Modern Graphite:
   paper-dialog-background-color: "var(--card-background-color)"
   paper-listbox-background-color: "var(--card-background-color)"
   paper-card-background-color: "var(--card-background-color)"
-  light-theme-disabled-color: "var(--disabled-color)"
-  dark-theme-disabled-color: "var(--disabled-color)"
   material-background-color: "var(--secondary-background-color)"
   material-secondary-background-color: "var(--primary-background-color)"
   material-divider-color: "var(--divider-color)"
@@ -3760,7 +3654,6 @@ Modern Graphite:
   sidebar-background-color: "var(--card-background-color)"
   sidebar-text-color: "var(--primary-text-color)"
   sidebar-icon-color: "var(--secondary-text-color)"
-  sidebar-selected-background-color: "rgba(var(--rgb-primary-color),0.12)"
   sidebar-selected-icon-color: "var(--primary-color)"
   sidebar-selected-text-color: "var(--primary-color)"
 
@@ -3824,9 +3717,6 @@ Modern Graphite:
   paper-font-subhead_-_font-family: "var(--ha-font-family-heading)"
   mdc-typography-font-family: "var(--ha-font-family-body)"
   mdc-typography-button-font-family: "var(--ha-font-family-body)"
-  card-title-font-size: "1.25rem"
-  card-title-font-weight: "600"
-  body-font-size: "1rem"
 
   # ── 10. MODES ─────────────────────────────────────────────────────────────
   modes:
