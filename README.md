@@ -80,10 +80,6 @@ All variants share one design language; only the brand color, the generated
 Older releases still load the theme — unknown variables are simply ignored — but the
 newest components keep their default colors, so the look is incomplete rather than broken.
 
-The native **Marketplace** only exists from Home Assistant 2026.11 onward
-([component](https://github.com/home-assistant/core/tree/2026.11.2/homeassistant/components/marketplace));
-on older releases install manually.
-
 ## Installation
 
 ### Marketplace (Home Assistant 2026.11+)
