@@ -6,6 +6,8 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-25
+
 ### Added
 
 - A HACS validation workflow (`.github/workflows/validate.yml`, category `theme`), the
