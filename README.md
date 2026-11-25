@@ -37,15 +37,13 @@ All variants share one design language; only the brand color, the generated
 
 ## Screenshots
 
-<p align="center">
-  <img src="screenshots/hero-light.png" width="420" alt="Modern Red, light mode">
-  <img src="screenshots/hero-dark.png" width="420" alt="Modern Red, dark mode">
-</p>
+| Light | Dark |
+| --- | --- |
+| ![Modern Red, light mode](screenshots/hero-light.png) | ![Modern Red, dark mode](screenshots/hero-dark.png) |
 
-<p align="center">
-  <img src="screenshots/states-light.png" width="420" alt="State colours, light mode">
-  <img src="screenshots/states-dark.png" width="420" alt="State colours, dark mode">
-</p>
+| Light | Dark |
+| --- | --- |
+| ![State colours, light mode](screenshots/states-light.png) | ![State colours, dark mode](screenshots/states-dark.png) |
 
 ![Modern Blue, Modern Green, Modern Orange and Modern Purple side by side](screenshots/variants.png)
 
