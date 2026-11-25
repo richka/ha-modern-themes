@@ -6,6 +6,13 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- `tools/demo_page.py` renders neutral preview pages straight from
+  `themes/modern.yaml`, and `docs/screenshots/demo/` holds the results: hero in light
+  and dark mode, the four-variant grid and the state-colour pages. The previews use
+  mock cards only, so they contain no entities or personal data.
+
 ### Changed
 
 - Removed ten theme variables that nothing reads, all of them legacy names with no
