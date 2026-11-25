@@ -235,8 +235,35 @@ theme CSS.
 
 ## Screenshots
 
-Rendered previews of every variant in light and dark mode go in
-[`screenshots/`](screenshots). Until they are added, the tables above are the reference.
+Every preview below is generated from the shipped [`themes/modern.yaml`](themes/modern.yaml)
+by [`tools/demo_page.py`](tools/demo_page.py): a neutral demo page with mock cards, no
+Home Assistant instance, entities or personal data involved.
+
+<p align="center">
+  <img src="docs/screenshots/demo/hero-light.png" width="420" alt="Modern Red, light mode">
+  <img src="docs/screenshots/demo/hero-dark.png" width="420" alt="Modern Red, dark mode">
+</p>
+
+![Four variants side by side: Modern Blue, Green, Orange and Purple](docs/screenshots/demo/variants.png)
+
+<p align="center">
+  <img src="docs/screenshots/demo/states-light.png" width="420" alt="State colours, light mode">
+  <img src="docs/screenshots/demo/states-dark.png" width="420" alt="State colours, dark mode">
+</p>
+
+To regenerate them after changing the palette:
+
+```bash
+python tools/demo_page.py --theme "Modern Red" --mode light --kind hero   --out .demo/hero-light.html
+python tools/demo_page.py --theme "Modern Red" --mode dark  --kind hero   --out .demo/hero-dark.html
+python tools/demo_page.py --grid "Modern Blue,Modern Green,Modern Orange,Modern Purple" --out .demo/variants.html
+python tools/demo_page.py --theme "Modern Red" --mode light --kind states --out .demo/states-light.html
+python tools/demo_page.py --theme "Modern Red" --mode dark  --kind states --out .demo/states-dark.html
+```
+
+Open each page in a browser and take a full-page screenshot into
+`docs/screenshots/demo/`. The theme tables above remain the textual reference for
+every variant, including the ones not pictured.
 
 ## Credits
 
