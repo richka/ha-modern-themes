@@ -8,6 +8,8 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- A HACS validation workflow (`.github/workflows/validate.yml`, category `theme`), the
+  check the Marketplace runs before a repository is accepted into the catalog.
 - `tools/demo_page.py` renders neutral preview pages straight from
   `themes/modern.yaml`, and `screenshots/` holds the results: hero in light and dark
   mode, the four-variant grid and the state-colour pages. The previews use mock cards
