@@ -90,10 +90,8 @@ newest components keep their default colors, so the look is incomplete rather th
 
 Themes reload on their own after installation.
 
-If the search does not show it yet — the catalog updates on a schedule — add the
-repository directly: Menu → **Add from a GitHub link** → paste
-`https://github.com/richka/ha-modern-themes`, choose type **Theme**. That path needs a
-GitHub connection, which the dialog offers if you have not connected one yet.
+If you do not see it in the search, add it directly: Menu → **Add from a GitHub link** →
+paste `https://github.com/richka/ha-modern-themes`, choose type **Theme**.
 
 ### Manual
 
