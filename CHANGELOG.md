@@ -6,6 +6,14 @@ and the project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-27
+
+### Changed
+
+- The Installation section leads with the Marketplace search now that the theme is in
+  the catalog; adding it from a GitHub link is the fallback for when the search has not
+  picked it up yet.
+
 ## [1.1.0] - 2026-11-25
 
 ### Added

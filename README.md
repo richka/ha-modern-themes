@@ -85,12 +85,15 @@ newest components keep their default colors, so the look is incomplete rather th
 ### Marketplace (Home Assistant 2026.11+)
 
 1. **Settings → Marketplace**
-2. Menu → **Add from a GitHub link**
-3. Paste `https://github.com/richka/ha-modern-themes`, choose type **Theme**
-4. Install, then reload the page
+2. Search for **Modern Themes**
+3. Install it, then choose a variant in **Profile → Theme**
 
-Adding a custom repository needs a GitHub connection, which the dialog offers if you have
-not connected one yet.
+Themes reload on their own after installation.
+
+If the search does not show it yet — the catalog updates on a schedule — add the
+repository directly: Menu → **Add from a GitHub link** → paste
+`https://github.com/richka/ha-modern-themes`, choose type **Theme**. That path needs a
+GitHub connection, which the dialog offers if you have not connected one yet.
 
 ### Manual
 
